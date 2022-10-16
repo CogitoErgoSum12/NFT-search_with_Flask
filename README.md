@@ -2,7 +2,7 @@
 
 ##### A web application written in python and flask to search for NFT images by their address. It saves all NFTs in postgresql database.    
 
-* ___P.S. I have set the default settings for postgres. If you have different    settings, open the base.po file in any text editor and change the settings to your own.___
+* ___P.S. I have set the default settings for postgres. If you have different    settings, open the base.py file in any text editor and change the settings to your own.___
 ***
 ##Installation
 
