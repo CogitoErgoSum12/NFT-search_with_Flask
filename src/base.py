@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 import requests
-import web3
-import json 
 from flask import Flask, render_template, request, redirect, url_for, make_response
 from flask_sqlalchemy import SQLAlchemy
 
