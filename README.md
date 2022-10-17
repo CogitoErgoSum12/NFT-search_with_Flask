@@ -4,7 +4,7 @@
 
 * ___P.S. I have set the default settings for postgres. If you have different    settings, open the base.py file in any text editor and change the settings to your own.___
 ***
-##Installation
+## Installation
 
 * Clone the repository to your computer
 
@@ -26,7 +26,7 @@ python3 base.py
 
 ***
 
-##Usage
+## Usage
 
 * After deploying the web application, you need to write the address in the search bar on your browser
 
@@ -43,7 +43,7 @@ ___P.S. Sometimes, if an error pops up, you need to refresh the page___
 
 ***
 
-#Examle
+# Examle
 
 Submit ```3HcD2Zz7cpZShUbS4KTEAXfLu31Yb9zb8wcJmNB6cQsh``` addres to input form
 
