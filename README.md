@@ -1,4 +1,4 @@
-# NFT-search_with_Flask
+# NFT-search_with_Flask_With_Autorization
 
 ##### A web application written in python and flask to search for NFT images by their address. It saves all NFTs in postgresql database.    
 
@@ -28,7 +28,9 @@ python3 base.py
 
 ## Usage
 
-* After deploying the web application, you need to write the address in the search bar on your browser
+* After deploying the web application, you need to write the address in the search bar on your browser. But firstly you need to go /register directory and register your login. After in /login directory, you can log in. 
+
+If you want to logout, write /logout.
 
 ```
 http://127.0.0.1:5000/
