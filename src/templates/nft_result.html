@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>NFT search</title>
@@ -9,12 +10,35 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="flex h-screen w-screen items-center justify-center bg-gray-200">
-  <div class="flex flex-col items-center justify-center gap-4">
-    <img>
-    <p> {{ payload.name }}</p>
-    <p> {{ payload.address }} </p>
-    <p> {{ payload.description }} </p>
+<body class="h-screen bg-gray-200 w-screen flex items-center justify-center">
+  <header class="bg-white w-full absolute top-0 left-0">
+    <div class="pointer-events-none absolute inset-0 z-30 shadow" aria-hidden="true"></div>
+    <div class="relative z-20">
+      <div class="mx-auto flex max-w-7xl items-center justify-between space-x-10 py-2 px-4 sm:px-8">
+        <div>
+          <a href="/" class="flex">
+            <span class="sr-only">Your Company</span>
+            <p class="text-xs font-bold text-stone-900 sm:text-base">NFT Searcher</p>
+          </a>
+        </div>
+        <div class="flex items-center md:ml-12">
+          <a href="/login" class="text-xs font-medium text-gray-500 hover:text-gray-900 sm:text-base">Sign in</a>
+          <a href="/register"
+            class="ml-8 inline-flex items-center justify-center rounded-md border border-transparent bg-blue-400 px-4 py-2 text-xs font-medium text-white shadow-sm hover:bg-indigo-700 sm:text-base">Sign
+            up</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div>
+    <div class="flex flex-col items-center justify-center gap-4">
+      <img>
+      <p> {{ payload.name }}</p>
+      <p> {{ payload.address }} </p>
+      <p> {{ payload.description }} </p>
+    </div>
   </div>
 </body>
+
 </html>
