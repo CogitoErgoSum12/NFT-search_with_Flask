@@ -1,0 +1,3 @@
+[console_scripts]
+morse-audio-decoder=morse_audio_decoder.__main__:main
+
