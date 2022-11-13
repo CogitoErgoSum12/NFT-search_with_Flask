@@ -1,5 +1,5 @@
 import requests
-import psycopg2
+
 from flask import  render_template, request, redirect, make_response, flash, url_for
 from werkzeug.security import check_password_hash, generate_password_hash
 from flask_login import login_required, login_user, logout_user
@@ -70,9 +70,8 @@ def login_page():
             return redirect(next_page)
         else:
             flash('Login or password is not correct.')
-
-    else:
-        flash('Fill login and password.')
+    #else:
+    #    flash('Fill login and password.')
 
     return render_template('login.html ')
 

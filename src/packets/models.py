@@ -1,7 +1,7 @@
 
 from flask_login import UserMixin
 
-from packets import db, manager
+from packets import manager, db
 
 
 @manager.user_loader
@@ -36,4 +36,3 @@ class Nft(db.Model):
     @classmethod
     def checkInDb(cls, nft_address):
         return cls.query.filter_by(address=nft_address).first()
-
