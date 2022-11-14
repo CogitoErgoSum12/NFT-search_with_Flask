@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../templates')
 app.secret_key = '!@#$%^&*'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost:5432/python'
 app.config['SQLALCHEMY TRACK_MODIFICATIONS'] = False

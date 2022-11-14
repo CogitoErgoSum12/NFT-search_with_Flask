@@ -4,7 +4,7 @@ from flask import  render_template, request, redirect, make_response, flash, url
 from werkzeug.security import check_password_hash, generate_password_hash
 from flask_login import login_required, login_user, logout_user
 
-from packets import app
+from import app
 from packets.models import Nft, Users
 
 
