@@ -17,6 +17,11 @@ db = SQLAlchemy(app)
 manager = LoginManager(app)
 manager.login_view = 'login_page'
 
+# functions
+
+@app.errorhandler(404)
+def page_not_found(e):
+    render_template('404.html'), 404
 
 
 @manager.user_loader
@@ -87,15 +92,16 @@ def nft_search():
         return make_response(render_template('nft_result.html', payload=payload))
 
     response2 = response.json()
+    try:
+        payload = {
 
-    payload = {
+            "name": response2["name"],
+            "description": response2["metaplex"]["metadataUri"],
+            "address": response2["mint"]
 
-        "name": response2["name"],
-        "description": response2["metaplex"]["metadataUri"],
-        "address": response2["mint"]
-
-    }
-
+        }
+    except KeyError:
+        return make_response(render_template('404.html'))
     nft = Nft(**payload)
 
     nft.addToDb()
@@ -161,14 +167,12 @@ def logout():
     return redirect(url_for('login_page'))
 
 
-# functions
 @app.after_request
 def redirectToNextPage(response):
     if response.status_code == 401:
         return redirect(url_for('login_page') + '?next=' + request.url)
 
     return response
-
 
 if __name__ == "__main__":
     app.run(debug=True)
